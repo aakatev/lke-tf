@@ -18,7 +18,7 @@ k8s_version = "1.17"
 region = "us-west"
 pools = [
   {
-    type : "g6-standard-4"
+    type : "g6-standard-1"
     count : 1
   }
 ]
