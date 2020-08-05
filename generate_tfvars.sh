@@ -1,5 +1,14 @@
 #!/bin/bash
 
+TF_VARS_CONTENT=$(cat variables.auto.tfvars)
+
+if [ $? == 0 ]; then
+  echo "Terraform variables files found!"
+  echo "Using the following configuration:"
+  echo "$TF_VARS_CONTENT"
+  exit 0
+fi
+
 set -euo pipefail
 
 echo 'Welcome! Please enter some information:'
